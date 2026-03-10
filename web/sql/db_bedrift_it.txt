@@ -1,0 +1,43 @@
+DATABASE: bedrift_it
+    +----------------------+
+    |       BRUKERE        |
+    +----------------------+
+    | PK bruker_id INT     |
+    | fornavn VARCHAR(50)  |
+    | etternavn VARCHAR(50)|
+    | epost VARCHAR(100)   |
+    +----------------------+
+            |
+            | 1
+            |
+            | *
+    +----------------------+
+    |       MASKINER       |
+    +----------------------+
+    | PK maskin_id INT     |
+    | maskin_navn VARCHAR  |
+    | operativsystem VARCHAR|
+    | FK bruker_id INT     |
+    +----------------------+
+            |
+            | 1
+            |
+            | *
+    +---------------------------+
+    |      MASKIN_PROGRAM       |
+    +---------------------------+
+    | PK id INT                 |
+    | FK maskin_id INT          |
+    | FK program_id INT         |
+    +---------------------------+
+            |
+            | *
+            |
+            | 1
+    +----------------------+
+    |      PROGRAMMER      |
+    +----------------------+
+    | PK program_id INT    |
+    | navn VARCHAR(100)    |
+    | versjon VARCHAR(50)  |
+    +----------------------+
